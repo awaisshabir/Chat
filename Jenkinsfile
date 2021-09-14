@@ -17,5 +17,13 @@ pipeline {
                 echo 'Deploying....'
             }
         }
+		 stage('Stage') {
+			when{
+			branch "staging"
+			}
+            steps {
+                echo 'Deploying....'
+            }
+        }
     }
 }
